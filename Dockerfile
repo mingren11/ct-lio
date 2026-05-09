@@ -44,8 +44,10 @@ COPY . src/ct-lio/
 # Patch packages.cmake (remove hardcoded developer paths)
 RUN python3 src/ct-lio/docker/patch_cmake.py
 
-# Build catkin workspace
+# Build catkin workspace: first build livox to generate message headers,
+# then build the full workspace
 RUN /bin/bash -c "source /opt/ros/noetic/setup.bash && \
+    catkin_make --pkg livox_ros_driver -DCMAKE_BUILD_TYPE=Release -j$(nproc) && \
     catkin_make -DCMAKE_BUILD_TYPE=Release -j$(nproc)"
 
 # Persist ROS setup in shell
