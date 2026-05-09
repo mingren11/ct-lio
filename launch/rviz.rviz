@@ -495,56 +495,6 @@ Visualization Manager:
       Transport Hint: raw
       Unreliable: false
       Value: false
-    - Buffer length: 10
-      Class: jsk_rviz_plugin/Plotter2D
-      Enabled: true
-      Name: Vel
-      Show Value: true
-      Topic: /velocity
-      Value: true
-      auto color change: false
-      auto scale: true
-      background color: 0; 0; 0
-      backround alpha: 0
-      border: true
-      foreground alpha: 0.699999988079071
-      foreground color: 25; 255; 240
-      height: 100
-      left: 128
-      linewidth: 1
-      max color: 255; 0; 0
-      max value: 1
-      min value: -1
-      show caption: true
-      text size: 12
-      top: 128
-      update interval: 0.03999999910593033
-      width: 100
-    - Buffer length: 30
-      Class: jsk_rviz_plugin/Plotter2D
-      Enabled: true
-      Name: Dist
-      Show Value: true
-      Topic: /move_dist
-      Value: true
-      auto color change: false
-      auto scale: true
-      background color: 0; 0; 0
-      backround alpha: 0
-      border: true
-      foreground alpha: 0.699999988079071
-      foreground color: 25; 255; 240
-      height: 100
-      left: 230
-      linewidth: 1
-      max color: 255; 0; 0
-      max value: 1
-      min value: -1
-      show caption: true
-      text size: 12
-      top: 128
-      update interval: 0.03999999910593033
-      width: 100
   Enabled: true
   Global Options:
     Background Color: 0; 0; 0

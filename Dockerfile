@@ -32,6 +32,11 @@ RUN cd /tmp && \
     make -j$(nproc) && make install && ldconfig && \
     rm -rf /tmp/ceres-solver /tmp/ceres-build
 
+# Additional RViz plugins
+RUN apt-get update && apt-get install -y \
+    ros-noetic-jsk-rviz-plugins \
+    && rm -rf /var/lib/apt/lists/*
+
 # Setup catkin workspace and clone livox_ros_driver
 WORKDIR /catkin_ws
 RUN mkdir -p src && \
