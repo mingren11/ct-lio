@@ -1,4 +1,4 @@
-FROM ros:noetic-desktop
+FROM osrf/ros:noetic-desktop-full
 
 ENV DEBIAN_FRONTEND=noninteractive
 
