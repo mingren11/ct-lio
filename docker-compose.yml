@@ -10,6 +10,7 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ./bags:/bags:ro
+      - ./config:/catkin_ws/src/ct-lio/config:ro
     network_mode: host
     stdin_open: true
     tty: true
