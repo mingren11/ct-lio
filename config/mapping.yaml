@@ -12,19 +12,19 @@ common:
 
 mapping:
   extrinsic_est_en: true
-  extrinsic_T: [ 0.0, 0.0, -0.0]
+  extrinsic_T: [ 0.112, 0.176, -0.247]
   extrinsic_R: [ 1, 0, 0,  0, 1, 0,  0, 0, 1]
 
 delay_time: 0.15
 
 odometry:
-  surf_res: 0.2
+  surf_res: 0.5
   log_print: false
   max_num_iteration: 10
   # ct_icp
   icpmodel: CT_POINT_TO_PLANE                    # Options: [CT_POINT_TO_PLANE, POINT_TO_PLANE]
-  size_voxel_map: 0.2                         # The voxel size of in the voxel map
-  min_distance_points: 0.05
+  size_voxel_map: 1.0                         # The voxel size of in the voxel map
+  min_distance_points: 0.15
   max_num_points_in_voxel: 20                 # The maximum number of points per voxel of the map
   max_distance: 500.0                        # The threshold of the distance to suppress voxels from the map
   weight_alpha: 0.9
@@ -39,9 +39,9 @@ odometry:
   power_planarity: 2.0
   num_closest_neighbors: 1
 
-  sampling_rate: 1.
+  sampling_rate: 1.5
   ratio_of_nonground: 2
-  max_num_residuals: 2000
+  max_num_residuals: 1000
   min_num_residuals: 300
   motion_compensation: CONSTANT_VELOCITY #NONE, CONSTANT_VELOCITY, ITERATIVE, CONTINUOUS
   beta_location_consistency: 1.0
