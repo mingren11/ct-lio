@@ -78,8 +78,8 @@ void standard_pcl_cbk(const sensor_msgs::PointCloud2::ConstPtr &msg)
         },
                                        "laser ds");
 
-        lio->pushData(cloud_out, std::make_pair(msg->header.stamp.toSec() - convert->getTimeSpan(), convert->getTimeSpan())); //  FIXME: for staircase dataset(header timestamp is the frame end)
-        // lio->pushData(cloud_out, std::make_pair(msg->header.stamp.toSec(), convert->getTimeSpan())); //  normal
+        // lio->pushData(cloud_out, std::make_pair(msg->header.stamp.toSec() - convert->getTimeSpan(), convert->getTimeSpan())); //  FIXME: for staircase dataset(header timestamp is the frame end)
+        lio->pushData(cloud_out, std::make_pair(msg->header.stamp.toSec(), convert->getTimeSpan())); //  normal
     }
     c++;
 }

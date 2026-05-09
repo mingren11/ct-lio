@@ -12,7 +12,7 @@ common:
 
 mapping:
   extrinsic_est_en: true
-  extrinsic_T: [ 0.112, 0.176, -0.247]
+  extrinsic_T: [ 0.0, 0.0, 0.0]
   extrinsic_R: [ 1, 0, 0,  0, 1, 0,  0, 0, 1]
 
 delay_time: 0.15
